@@ -37,3 +37,20 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+
+- stage: Deploy
+  displayName: Deploy to Azure App Service
+
+  jobs:
+  - job: Deploy
+    pool:
+      vmImage: $(vmImageName)
+
+    steps:
+    - task: AzureWebAppContainer@1
+      displayName: Deploy to App Service
+
+      inputs:
+        azureSubscription: 'Devops-project'
+        appName: 'codealpha'
+        containers: 'codealphamyacrregistry.azurecr.io/idungviccicdpipelineusingazure:$(tag)'
