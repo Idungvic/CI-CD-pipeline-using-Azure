@@ -17,8 +17,6 @@ The project integrates:
 
 The implementation follows modern DevOps practices by enabling automated builds, automated deployments, and continuous integration workflows.
 
----
-
 # Project Architecture
 
 The workflow of the project follows this structure:
@@ -40,8 +38,6 @@ Deploy Container to Azure App Service
    ↓
 Public Website Access
 ```
-
----
 
 # Technologies Used
 
@@ -66,8 +62,6 @@ Public Website Access
 ├── azure-pipelines.yml
 └── README.md
 ```
-
----
 
 # Application Setup
 
@@ -97,8 +91,6 @@ The application file was created to verify successful deployment through the CI/
 </html>
 ```
 
----
-
 # Docker Containerization
 
 The application was containerized using Docker and served with NGINX.
@@ -121,8 +113,6 @@ Docker was used to:
 * Ensure consistency across environments
 * Simplify deployment to Azure App Service
 * Enable automated CI/CD workflows
-
----
 
 # GitHub Repository Setup
 
@@ -150,8 +140,6 @@ GitHub was used to:
 * Trigger Azure DevOps pipelines automatically
 * Maintain centralized project storage
 
----
-
 # Azure Container Registry (ACR)
 
 An Azure Container Registry was created to securely store Docker images generated during the pipeline process.
@@ -168,8 +156,6 @@ codealphamyacrregistry
 idungviccicdpipelineusingazure
 ```
 
----
-
 # Azure DevOps Pipeline Setup
 
 Azure DevOps was connected to the GitHub repository to automate the CI/CD workflow.
@@ -185,8 +171,6 @@ The pipeline performs the following tasks automatically:
 3. Push image to Azure Container Registry
 4. Deploy container to Azure App Service
 5. Publish application updates automatically
-
----
 
 # Azure Pipeline Configuration
 
@@ -247,8 +231,6 @@ stages:
         containers: 'codealphamyacrregistry.azurecr.io/idungviccicdpipelineusingazure:latest'
 ```
 
----
-
 # Build Stage Explanation
 
 The Build Stage performs:
@@ -261,7 +243,6 @@ Each pipeline execution generates a new container image version.
 
 The `latest` tag was also implemented to ensure stable deployments from Azure App Service.
 
----
 
 # Deployment Stage Explanation
 
@@ -273,7 +254,6 @@ The Deploy Stage automatically:
 
 This eliminates the need for manual deployment.
 
----
 
 # Azure App Service Deployment
 
@@ -290,8 +270,6 @@ codealpha
 ```text
 Docker Container Deployment
 ```
-
----
 
 # Managed Identity & Security Configuration
 
@@ -312,8 +290,6 @@ Managed Identity was used to:
 * Improve cloud security
 * Enable secure authentication between Azure services
 
----
-
 # Continuous Integration (CI)
 
 The Continuous Integration process automatically:
@@ -325,7 +301,6 @@ The Continuous Integration process automatically:
 
 This ensures rapid and consistent software integration.
 
----
 
 # Continuous Deployment (CD)
 
@@ -337,7 +312,6 @@ The Continuous Deployment process automatically:
 
 This enables faster and automated software delivery.
 
----
 
 # Pipeline Monitoring
 
@@ -350,7 +324,6 @@ Pipeline execution and deployment monitoring were performed using:
 
 Monitoring helped identify and resolve deployment and authentication issues during implementation.
 
----
 
 # Key Challenges Encountered
 
@@ -374,15 +347,12 @@ The issue was resolved by:
 
 This allowed secure image pulling from ACR.
 
----
 
 # Live Application URL
 
 ```text
 https://codealpha-gse9cxe5eyc3f4fr.canadacentral-01.azurewebsites.net
 ```
-
----
 
 # Learning Outcomes
 
@@ -396,8 +366,6 @@ This project provided hands-on experience in:
 * Cloud authentication and IAM
 * GitHub integration with Azure DevOps
 * Troubleshooting cloud deployment issues
-
----
 
 # Conclusion
 
